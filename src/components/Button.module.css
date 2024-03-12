@@ -14,6 +14,23 @@
   color: var(--ternary);
 }
 
+.classicButton {
+  padding: 0.4rem 2rem;
+  background-color: transparent;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition:  300ms ease-out;
+  position: relative;
+  overflow: hidden;
+  border: solid var(--secondary) 1px;
+  color: var(--ternary);
+  max-width: fit-content;
+  margin-inline: auto;
+}
 .button::before {
   content: "";
   left: 0;
@@ -37,3 +54,4 @@
  transform: scaleX(1);
  
 }
+

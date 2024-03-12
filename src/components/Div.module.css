@@ -4,3 +4,12 @@
   color: var(--ternary);
   font-size: 900;
 }
+.smallerDivCircle{
+  width: 2rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  padding: 0.4rem;
+  border: var(--secondary) 2px solid;
+  color: var(--ternary);
+  text-align: center;
+}

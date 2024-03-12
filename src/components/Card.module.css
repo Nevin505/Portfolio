@@ -1,0 +1,10 @@
+.div{
+  width: 8rem;
+  border-radius: 2rem;
+  background-color: var(--primary);
+  color: var(--ternary);
+  border: var(--ternary) 1px solid;
+  padding: 1rem;
+  margin-inline: auto;
+  text-align: center;
+}

@@ -5,13 +5,13 @@ import Heading from "../components/Heading";
 import Div from "../components/Div";
 import Detail from "../components/Detail";
 import Column from "../components/Column";
-
+import Card from "../components/Card";
 import LandingPageStyle from "./LandingPage.module.css";
 
 import PortodileImage from "../Assets/PortfolioImage.jpg";
 import Resume from "../Assets/NevinJohn.pdf";
 
-import { FaArrowCircleRight,FaArrowCircleDown } from "react-icons/fa";
+import { FaArrowCircleRight,FaDownload  } from "react-icons/fa";
 
 const LandingPage = () => {
   return (
@@ -59,16 +59,17 @@ const LandingPage = () => {
         <Div>
           <Heading>Personal Infos</Heading>
           <Row>
-            <Column >
-              <Detail LabelName="First Name" candiateDetails=" Steve"></Detail>
-              <Detail LabelName="Last Name" candiateDetails="Milner"></Detail>
+            {/* Details */}
+            <Column variantType='mediumgap'>
+              <Detail LabelName="First Name" candiateDetails=" Nevin"></Detail>
+              <Detail LabelName="Last Name" candiateDetails="Zachariah"></Detail>
               <Detail LabelName="Age" candiateDetails="24 Years"></Detail>
               <Detail LabelName="Nationality" candiateDetails="Indian"></Detail>
-                      {/* For DownLoad */}
-                <a href={Resume} download> <Button> DownLoad CV<FaArrowCircleDown size={40}/></Button></a>
+              {/* For DownLoad */}
+              <a href={Resume} download> <Button> DownLoad CV<FaDownload size={36}/></Button></a>
             </Column>
 
-            <Column>
+            <Column variantType='mediumgap'>
               <Detail
                 LabelName="Address"
                 candiateDetails=" Nedunagathra"
@@ -80,12 +81,29 @@ const LandingPage = () => {
               ></Detail>
               <Detail
                 LabelName="Langages"
-                candiateDetails="English Malayalam"
+                candiateDetails="English, Malayalam"
               ></Detail>
+            </Column>
+            
+           <Column variantType='mediumgap'>
+           <Row variantType="smallerGap"> 
+              <a href="https://github.com/Nevin505">
+             <Button variantType="classicButton">LinkedIn</Button>
+             </a>
+             <a href="www.linkedin.com/in/nevin-zachariah-john">
+             <Button variantType="classicButton">GitHub</Button>
+             </a>
+            </Row>
+            <a href="mailto:nevinjohn63@gmail.com">
+            <Button variantType="classicButton">Mail</Button>
+            </a>
             </Column>
           </Row>
         </Div>
       </section>
+      {/* Section Including My Skills */}
+        <Div variantType='smallerDivCircle'>25%</Div>
+
     </>
   );
 };

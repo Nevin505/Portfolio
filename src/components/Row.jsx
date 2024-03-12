@@ -1,8 +1,12 @@
 import RowModuleStyle from './Row.module.css';
 
-const Row=({children})=>{
+const Row=({variantType,children})=>{
+    let divStyles=RowModuleStyle.rowStyle
+    if(variantType==='smallerGap'){
+        divStyles+=" "+RowModuleStyle.smallerGap;
+    }
     return(
-        <div className={RowModuleStyle.rowStyle}>{children}</div>
+        <div className={divStyles}>{children}</div>
     );
 }
 export default Row;
