@@ -1,0 +1,8 @@
+.label{
+   color: #BBBBBB;
+   font-size: large;
+}
+.span{
+  color: var(--ternary);
+  font-size: large;
+}

@@ -1,0 +1,39 @@
+.button {
+  padding: 0.4rem 1rem;
+  background-color: transparent;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition:  300ms ease-out;
+  position: relative;
+  overflow: hidden;
+  border: solid var(--secondary) 1px;
+  color: var(--ternary);
+}
+
+.button::before {
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  transform-origin: right;
+  z-index: -1;
+  transform: scaleX(0);
+  background-color: var(--secondary);
+  transition:  transform 300ms ease-in;
+}
+.button {
+  z-index: 1;
+}
+.button:hover{
+    color: var(--ternary);
+}
+.button:hover::before {
+ transform: scaleX(1);
+ 
+}

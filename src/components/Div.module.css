@@ -1,0 +1,6 @@
+.div{
+   padding-block: 2rem;
+  padding-inline: 6rem;
+  color: var(--ternary);
+  font-size: 900;
+}

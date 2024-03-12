@@ -1,0 +1,5 @@
+.rowStyle{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8rem;
+}

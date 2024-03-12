@@ -1,0 +1,8 @@
+.columnStyles{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.mediumGap{
+  gap: 1.8rem;
+}
