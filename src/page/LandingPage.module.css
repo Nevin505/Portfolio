@@ -8,13 +8,13 @@
 }
 /* Background Image  which includes Slanting Section */
 .sectionPage {
-  background-image: linear-gradient(-111deg, var(--primary) 68%, var(--secondary) calc(68% + 2px));
+  background-image: linear-gradient(-111deg, var(--primary) 68%, var(--secondary) calc(30% + 2px));
   padding: 2rem;
 }
 
 img {
   flex: 1;
-  width: 30rem;
+  max-width: 30rem;
   height: 32rem;
   border-radius: 2rem;
 }
@@ -23,10 +23,12 @@ img {
   color: var(--secondary);
   font-size: xx-large;
 }
+.rightSectionFirstDiv{
 
+}
 .rightSectionDiv {
-  padding-top: 5rem;
-  flex: 3;
+  padding-top: clamp(0.4rem ,4vw, 5rem);
+  flex: 1;
   /* resposnive remove this */
   & h2{
     color: var(--ternary);
@@ -42,32 +44,67 @@ img {
   background-color: #111111;
 }
 
-.secondSectionInside{
-  position: relative;
+.overlapp{
+  /* text-align: center; */
+  /* text-align: center; */
 }
-
-.up {
-  position: absolute;
-  top: 3.7rem;
-  left: 42%;
-  z-index: 2;
-  color: white;
-  font-size: 4rem;
-  max-width: fit-content;
-  & span{
-      color: var(--secondary);
-  }
-}
-
-.down {
+.down{
   position: relative;
-  top: 0;
-  left: 35%;
   color: #222222;
-  z-index: 1;
-  font-size: 8rem;
-   max-width: fit-content;
+  font-size: clamp(1rem,15vw,6rem);
+  letter-spacing: 0.6rem;
+  font-weight: 900;
+  text-align: center;
+   max-width: max-content;
+   margin-inline: auto;
+}
+.up{
+  position: absolute;
+  color: var(--ternary);
+  font-size: clamp(0.6rem,8vw,3rem);;
+  letter-spacing: 0rem;
+  top: 34%;
+  left: 20%;
+ 
+
 }
 a{
   text-decoration: none;
+}
+/*  */
+.skillSection{
+  background-color:var(--primary);
+  padding-inline: clamp(2rem,8vw,10rem);
+  /* padding-inline:6rem ; */
+  & p{
+    color: var(--secondary);
+  }
+
+}
+.skillStyle{
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  max-width: fit-content;
+  padding: 0.4rem;
+  color: var(--secondary);
+  border: var(--ternary) 2 px solid;
+  & p{
+    margin-block: auto;
+  }
+}
+.imgStyle{
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+.circleWidth{
+  width: 10rem;
+  height: 14rem;
+}
+@media  (max-width: 600px){
+  img{
+    max-width: 20rem;
+    object-fit: contain;
+  }
 }

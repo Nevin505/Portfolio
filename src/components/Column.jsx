@@ -6,6 +6,9 @@ const Column=({variantType='columnStyles',children})=>{
     if(variantType==='mediumgap'){
          columnStyles+=" "+DivStyle.mediumGap;
     }
+    else if(variantType==='largeGap'){
+        columnStyles+=" "+DivStyle.largeGap;
+    }
     return(
         <div className={columnStyles}>{children}</div>
       

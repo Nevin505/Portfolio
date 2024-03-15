@@ -1,3 +1,5 @@
+import { FaArrowCircleRight, FaDownload } from "react-icons/fa";
+
 import NavBar from "../components/Navbar";
 import Row from "../components/Row";
 import Button from "../components/Button";
@@ -6,12 +8,12 @@ import Div from "../components/Div";
 import Detail from "../components/Detail";
 import Column from "../components/Column";
 import Card from "../components/Card";
-import LandingPageStyle from "./LandingPage.module.css";
-
 import PortodileImage from "../Assets/PortfolioImage.jpg";
 import Resume from "../Assets/NevinJohn.pdf";
 
-import { FaArrowCircleRight,FaDownload  } from "react-icons/fa";
+import LandingPageStyle from "./LandingPage.module.css";
+
+import skills from "../util/Skills";
 
 const LandingPage = () => {
   return (
@@ -27,7 +29,9 @@ const LandingPage = () => {
       <section className={LandingPageStyle.sectionPage}>
         {/* 1 section including image on the left and the contents on the right*/}
         <Row>
-          <img src={PortodileImage} alt="Porfile Image" />
+         <div className={LandingPageStyle.rightSectionFirstDiv}>
+         <img src={PortodileImage} alt="Porfile Image" />
+         </div>
           {/* Right Section Div Which includes all the contents */}
           <div className={LandingPageStyle.rightSectionDiv}>
             <Column variantType="mediumgap">
@@ -42,34 +46,42 @@ const LandingPage = () => {
                 where every line of code is an opportunity to innovate.
               </p>
               <div>
-                <Button>More About Me <FaArrowCircleRight size={40}/></Button>
+                <Button>
+                  More About Me <FaArrowCircleRight size={40} />
+                </Button>
               </div>
             </Column>
           </div>
         </Row>
       </section>
+
+
       {/* Second Section Including About */}
+
       <section className={LandingPageStyle.secondSection}>
-        <div className={LandingPageStyle.secondSectionInside}>
-          <h1 className={LandingPageStyle.down}>Resume</h1>
-          <h1 className={LandingPageStyle.up}>
-            About <span>Me</span>
-          </h1>
+        <div className={LandingPageStyle.overlapp}>
+          <div className={LandingPageStyle.down}>
+            Resume
+            <div className={LandingPageStyle.up}>About Me</div>
+          </div>
         </div>
         <Div>
+        <Column variantType="largeGap">
           <Heading>Personal Infos</Heading>
           <Row>
             {/* Details */}
-            <Column variantType='mediumgap'>
+            <Column variantType="mediumgap">
               <Detail LabelName="First Name" candiateDetails=" Nevin"></Detail>
-              <Detail LabelName="Last Name" candiateDetails="Zachariah"></Detail>
+              <Detail
+                LabelName="Last Name"
+                candiateDetails="Zachariah"
+              ></Detail>
               <Detail LabelName="Age" candiateDetails="24 Years"></Detail>
               <Detail LabelName="Nationality" candiateDetails="Indian"></Detail>
               {/* For DownLoad */}
-              <a href={Resume} download> <Button> DownLoad CV<FaDownload size={36}/></Button></a>
             </Column>
 
-            <Column variantType='mediumgap'>
+            <Column variantType="mediumgap">
               <Detail
                 LabelName="Address"
                 candiateDetails=" Nedunagathra"
@@ -84,26 +96,32 @@ const LandingPage = () => {
                 candiateDetails="English, Malayalam"
               ></Detail>
             </Column>
-            
-           <Column variantType='mediumgap'>
-           <Row variantType="smallerGap"> 
-              <a href="https://github.com/Nevin505">
-             <Button variantType="classicButton">LinkedIn</Button>
-             </a>
-             <a href="www.linkedin.com/in/nevin-zachariah-john">
-             <Button variantType="classicButton">GitHub</Button>
-             </a>
-            </Row>
-            <a href="mailto:nevinjohn63@gmail.com">
-            <Button variantType="classicButton">Mail</Button>
-            </a>
-            </Column>
           </Row>
+         <div>
+         <Button>
+            <a href={Resume}> DownLoad CV</a>
+            <FaDownload size={36} />
+          </Button>
+         </div>
+        </Column>
         </Div>
+       
       </section>
-      {/* Section Including My Skills */}
-        <Div variantType='smallerDivCircle'>25%</Div>
 
+      {/* Section Including My Skills */}
+      <section className={LandingPageStyle.skillSection}>
+        <p>Skills</p>
+        <Row variantType="smallerGap">
+          {skills.map((skill) => {
+            return (
+              <div key={skill.id} className={LandingPageStyle.skillStyle}>
+                <p>{skill.skillName}</p>
+                <img className={LandingPageStyle.imgStyle} src={skill.img} alt={skill.skillName} />
+              </div>
+            );
+          })}
+        </Row>
+      </section>
     </>
   );
 };

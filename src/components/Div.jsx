@@ -1,7 +1,7 @@
 import DivStyle from './Div.module.css'
-const Div=({variantType,children})=>{
+const Div=({children})=>{
     return(
-        <div className={variantType==='smallerDivCircle'?DivStyle.smallerDivCircle:DivStyle.div}>{children}</div>
+        <div className={DivStyle.div}>{children}</div>
     )
 }
 export default Div;
