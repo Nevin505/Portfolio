@@ -1,0 +1,24 @@
+.down{
+    position: relative;
+    color: #222222;
+    padding-block: 1rem;
+    font-size: clamp(1rem,15vw,7rem);
+    letter-spacing: 0.6rem;
+    font-weight: 900;
+    text-align: center;
+     max-width: max-content;
+     margin-inline: auto;
+     text-transform: uppercase;
+  }
+  .up{
+    position: absolute;
+    color: var(--ternary);
+    font-size: clamp(0.6rem,8vw,3rem);;
+    letter-spacing: 0rem;
+    top: 38%;
+    left: 22%;
+    text-transform: uppercase;
+  }
+  .spanUpperDeisgin{
+    color: var(--secondary);
+  }

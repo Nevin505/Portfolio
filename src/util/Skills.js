@@ -17,16 +17,22 @@ const skills=[{
 },
 {
     id:3,
+    skillName:"TailWind",
+    img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX9fZzRj7BuQAtuf6RSuqIjWEaai2Vl7sFq2Y6tKq5hA&s'
+
+},
+{
+    id:4,
     skillName:"JavaScript",
     img:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png?20141107110902'
 },
 {
-   id:4,
+   id:5,
    skillName:"Angular",
    img:'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/512px-Angular_full_color_logo.svg.png'
 },
 {
-    id:5,
+    id:6,
     skillName:'React Js',
     img:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png'
 },

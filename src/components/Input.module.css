@@ -1,0 +1,7 @@
+.defaultStyle{
+  padding: 0.5rem 1rem;
+  border-radius: 01rem;
+  background-color: var(--primary);
+  color: var(--ternary);
+  /* outline: 0; */
+}

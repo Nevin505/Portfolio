@@ -1,10 +1,10 @@
-import DivStyle from './Detail.module.css'
+import divStyle from './Detail.module.css'
 
 const Detail=({LabelName,candiateDetails})=>{
   return (
     <div>
-    <label htmlFor="" className={DivStyle.label}>{LabelName}</label>
-    <span className={DivStyle.span}> : {candiateDetails}</span>
+    <label className={divStyle.label}>{LabelName}</label>
+    <span className={divStyle.span}> : {candiateDetails}</span>
     </div>
   );
 }

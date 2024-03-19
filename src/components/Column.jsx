@@ -1,13 +1,13 @@
-import DivStyle from './Column.module.css'
+import divStyle from './Column.module.css'
 const Column=({variantType='columnStyles',children})=>{
 
-    let columnStyles=DivStyle.columnStyles;
+    let columnStyles=divStyle.columnStyles;
 
     if(variantType==='mediumgap'){
-         columnStyles+=" "+DivStyle.mediumGap;
+         columnStyles+=" "+divStyle.mediumGap;
     }
     else if(variantType==='largeGap'){
-        columnStyles+=" "+DivStyle.largeGap;
+        columnStyles+=" "+divStyle.largeGap;
     }
     return(
         <div className={columnStyles}>{children}</div>

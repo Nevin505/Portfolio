@@ -1,3 +1,10 @@
 .navStyle{
    height: 4rem;
-}
+   height: 100%;
+   padding-block: 1rem;
+   list-style-type: none;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   color: var(--ternary);
+ }

@@ -7,25 +7,21 @@ import Heading from "../components/Heading";
 import Div from "../components/Div";
 import Detail from "../components/Detail";
 import Column from "../components/Column";
-import Card from "../components/Card";
 import PortodileImage from "../Assets/PortfolioImage.jpg";
 import Resume from "../Assets/NevinJohn.pdf";
+import OverlappingHeading from "../components/OverlappingHeading";
+import Input from "../components/Input";
 
 import LandingPageStyle from "./LandingPage.module.css";
 
 import skills from "../util/Skills";
+import projects from "../util/projects";
+
 
 const LandingPage = () => {
   return (
     <>
-      <NavBar>
-        <menu className={LandingPageStyle.menuStyle}>
-          <li>Home</li>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Contact</li>
-        </menu>
-      </NavBar>
+      <NavBar/>
       <section className={LandingPageStyle.sectionPage}>
         {/* 1 section including image on the left and the contents on the right*/}
         <Row>
@@ -46,8 +42,10 @@ const LandingPage = () => {
                 where every line of code is an opportunity to innovate.
               </p>
               <div>
-                <Button>
-                  More About Me <FaArrowCircleRight size={40} />
+                <Button variantType='easeInButton' icon={<FaArrowCircleRight size={40} />} ClickEventHandler={()=>{
+                 return  window.location='#aboutMe'
+                }}>
+                  More About Me 
                 </Button>
               </div>
             </Column>
@@ -58,13 +56,10 @@ const LandingPage = () => {
 
       {/* Second Section Including About */}
 
-      <section className={LandingPageStyle.secondSection}>
-        <div className={LandingPageStyle.overlapp}>
-          <div className={LandingPageStyle.down}>
-            Resume
-            <div className={LandingPageStyle.up}>About Me</div>
-          </div>
-        </div>
+      <section id="aboutMe" className={LandingPageStyle.secondSection}>
+
+        <OverlappingHeading upperLayerContent="About" spanUpperLyer=" Me" downLayerContent="Resume" ></OverlappingHeading>
+
         <Div>
         <Column variantType="largeGap">
           <Heading>Personal Infos</Heading>
@@ -96,9 +91,19 @@ const LandingPage = () => {
                 candiateDetails="English, Malayalam"
               ></Detail>
             </Column>
+            
+            <Column variantType="mediumgap">
+              <Button variantType="classicButton"><a href="https://www.linkedin.com/in/nevin-zachariah-john
+" target="blank">LinkedIn</a>
+              </Button>
+              <Button variantType="classicButton">
+                <a href="https://github.com/Nevin505" target="blank">GitHub</a></Button>
+              <Button variantType="classicButton"> <a href="mailto:nevinjohn63@gmail.com" target="blank">Gamil</a> </Button>
+         
+            </Column>
           </Row>
          <div>
-         <Button>
+         <Button variantType='easeInButton'>
             <a href={Resume}> DownLoad CV</a>
             <FaDownload size={36} />
           </Button>
@@ -110,7 +115,7 @@ const LandingPage = () => {
 
       {/* Section Including My Skills */}
       <section className={LandingPageStyle.skillSection}>
-        <p>Skills</p>
+        <p>Skills:</p>
         <Row variantType="smallerGap">
           {skills.map((skill) => {
             return (
@@ -120,6 +125,30 @@ const LandingPage = () => {
               </div>
             );
           })}
+        </Row>
+      </section>
+      <section>
+      <OverlappingHeading upperLayerContent="My " spanUpperLyer="Portfolio" downLayerContent="Projects" ></OverlappingHeading>
+      </section>
+      {/* Projects */}
+      <section className={LandingPageStyle.projectMainCard}>
+        {projects.map((project,index)=>{
+             return <div  key={index} className={LandingPageStyle.projectSkillsCard}>
+                      <img src={project.imgs} alt={project.projectName}/>
+                      <p>{project.projectName}</p>
+                     
+                      <p className={LandingPageStyle.phover}>{project.description}</p>
+                      
+                   </div>
+        })}
+          
+      </section>
+      <section>
+        <OverlappingHeading downLayerContent="CONTACT" upperLayerContent="GET IN " spanUpperLyer="TOUCH"></OverlappingHeading>
+        <Row>
+        <Input placeholder="Your Name"/>
+        <Input placeholder='Your Email'/>
+        <Input placeholder='Your Subject'/>
         </Row>
       </section>
     </>
