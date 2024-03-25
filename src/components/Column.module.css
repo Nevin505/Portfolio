@@ -3,9 +3,11 @@
   flex-direction: column;
   gap: 1.2rem;
   flex: 1;
+  padding-block: .2rem;
+  /* border: 2px solid green; */
 }
 .mediumGap{
-  gap: 1.8rem;
+  gap: 2rem;
 }
 .largeGap{
   gap: 2.2rem;

@@ -2,11 +2,15 @@
 /* Background Image  which includes Slanting Section */
 .sectionPage {
   background-color: var(--primary);
+  margin-top: 2rem;
   padding: 2rem;
 }
-
+.rightSectionFirstDiv{
+  flex: 1 0 26rem;
+}
 img {
-  flex: 1;
+  display: block;
+  margin-inline: auto;
   max-width: 30rem;
   border-radius: 2rem;
 }
@@ -14,12 +18,12 @@ img {
 .headingStyle {
   color: var(--secondary);
   font-size: xx-large;
+  width: 100%;
 }
 
 .rightSectionDiv {
-  padding-top: clamp(0.4rem ,4vw, 5rem);
-  flex: 1;
-  /* resposnive remove this */
+  flex: 1 0 21.5rem;
+
   & h2{
     color: var(--ternary);
   }
@@ -38,20 +42,13 @@ a{
   text-decoration: none;
   color: white;
 }
-/*  */
-.skillSection{
-  background-color:var(--primary);
-  padding-inline: clamp(2rem,8vw,10rem);
-  & p{
-    color: var(--secondary);
-  }
 
+p{
+  color: var(--secondary);
 }
 .skillStyle{
   display: flex;
-  justify-content: center;
-  gap: 0.6rem;
-  width: 8rem;
+  justify-content: space-between;
   padding: 0.4rem;
   color: var(--secondary);
   border: var(--ternary) 2 px solid;
@@ -59,11 +56,12 @@ a{
     margin-block: auto;
   }
 }
-.imgStyle{
-  width: 2rem;
-  height: 2rem;
+
+.image{
+  max-width: 3rem;
   object-fit: contain;
 }
+
 .circleWidth{
   width: 10rem;
   height: 14rem;
@@ -79,56 +77,129 @@ a{
 
 /* Projects With Hover */
 .projectSkillsCard{
-  width: 17rem;
-  background-color: red;
-  /* overflow: hidden; */
-  position: relative;
+  flex: 1 0 22rem;
+  padding-block: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  text-align: center;
+  overflow: hidden;
   & p{
     color: var(--secondary);
-    padding: 0.1rem 1rem;
+    padding: 0.1rem 0.4rem;
   }
   & img{
     width: 100%;
     height: fit-content;
     object-fit: contain;
     border-radius: 0%;
-    transition:all 0.4s ;
   }
+  .phovesr{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+ 
+}
+.contactMe{
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.noWrapRow{
+  display: flex;
+  flex:3;
+  justify-content: space-between;
+  flex-wrap: wrap;
+   gap: 1rem;
+  /* border: 2px solid red; */
 }
 
 @media(hover){
   .projectSkillsCard{
-    height: 12rem;
+    height: 18rem;
+    transition:all 450ms ease;
+     
   }
   .phover{
     display: none;
+    
   }
   
   .projectSkillsCard:hover{
-   background-image:linear-gradient(white,black)
+    transform: scale(1.1);
+     background-image:linear-gradient(white,black);
+    box-shadow: white 0.4rem 0.1rem 0.4rem  ; 
   }
+  
   .projectSkillsCard:hover img{
     display: none;
   }
+
   
   .projectSkillsCard:hover .phover{
     display: block;
-    transform: translateY(50%);
-  
   }
-}
-
-
-
-@media  (max-width: 600px){
-  img{
-    max-width: 20rem;
-    object-fit: contain;
-  }
-}
-
-@media(hover){
   .sectionPage {
-  background-image: linear-gradient(-111deg, var(--primary) 68%, var(--secondary) calc(30% + 2px));
+    background-image: linear-gradient(-111deg, var(--primary) 68%, var(--secondary) calc(30% + 2px));
+    }
+}
+
+@media  (max-width: 800px){
+
+  .pStyle{
+    font-size: larger;
+    font-weight: 380;
+
+  }
+  .headingStyle {
+    text-align: center;
+    font-size: x-large;
+  }
+  .subheadingStyle{
+    text-align: center;
+
+  }
+  .rightSectionDiv {
+    & h2{
+        font-size: larger;
+    }
+    & p {
+      max-width: 100%;
+    }
   }
 }
+@media (max-width:1200px){
+
+  .headingStyle {
+    text-align: center;
+  }
+  .subheadingStyle{
+    text-align: center;
+  }
+
+  .pStyle{
+    font-size: larger;
+    line-height: 0.8rem;
+    font-weight: 380;
+  }
+  .rightSectionDiv {
+    & h2{
+        font-size: larger;
+    }
+    & p {
+      max-width: 100%;
+    }
+  }
+  .projectSkillsCard{
+    & p{
+      font-size: medium;
+    }
+    .phover{
+      font-size: medium;
+    }
+  }
+}
+

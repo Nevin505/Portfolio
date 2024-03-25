@@ -1,0 +1,12 @@
+.section{
+      padding-inline: clamp(2rem,8vw,4em);
+     background-image: linear-gradient(var(--primary),var(--primary));
+     margin-top: 3rem;
+}
+
+@media(hover){
+    .section {
+    /* background-image: linear-gradient(-111deg, var(--primary) 68%, var(--secondary) calc(30% + 2px)); */
+    }
+  }
+  

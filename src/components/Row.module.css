@@ -1,11 +1,27 @@
 .rowStyle{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    gap: 6rem;
-    flex-wrap: wrap;
+    gap: 2rem;
+    /* border: red 2px solid; */
 }
 .smallerGap{
-    gap: 1.8rem;
+    gap: 1.4rem;
+}
+.mediumGap{
+    gap: 3rem;
+}
+.largerGap{
+    gap: 6rem;
+}
+@media  (max-width:600px) {
+    .largerGap{
+        gap: 2rem;
+    } 
+}
+@media  (max-width:1200px) {
+    .largerGap{
+        gap: 2.8rem;
+    } 
 }

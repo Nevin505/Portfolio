@@ -1,0 +1,33 @@
+.smallCard{
+  max-width: 22rem;
+}
+/* 
+@media(hover){
+  .smallCard{
+    height: 14rem;
+    transition:all 450ms ease;
+   
+  }
+  .phover{
+    display: none;
+    
+  }
+  
+  .smallCard:hover{
+    transform: scale(1.1);
+     background-image:linear-gradient(white,black);
+    box-shadow: white 0.4rem 0.1rem 0.4rem  ; 
+  }
+  
+  .smallCard:hover img{
+    display: none;
+  }
+
+  
+  .smallCard:hover .phover{
+    display: block;
+  }
+  .smallCard {
+    background-image: linear-gradient(-111deg, var(--primary) 68%, var(--secondary) calc(30% + 2px));
+    }
+} */
